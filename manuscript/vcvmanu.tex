@@ -1,0 +1,498 @@
+\documentclass[12pt,letterpaper]{article}
+\raggedright
+\usepackage{natbib}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage[pdftex]{graphicx}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{sectsty}
+\usepackage{geometry}
+\usepackage{fullpage}
+\usepackage{amsmath}
+
+\usepackage{setspace}
+\onehalfspacing
+
+%% OPTIONAL MACRO DEFINITIONS
+\def\PC{\emph{P.~cranolopha}}
+\def\P{\emph{Pedicularis}}
+\def\GM{{\bf G}}
+\def\PM{{\bf P}}
+\def\kronecker{\raisebox{1pt}{\ensuremath{\:\otimes\:}}} 
+
+
+\bibpunct{(}{)}{,}{a}{}{;}
+\setlength{\parindent}{0.25in}
+\setcounter{secnumdepth}{0}
+\pagestyle{empty}
+
+
+\renewcommand{\section}[1]{%
+\bigskip
+\begin{center}
+\begin{large}
+\normalfont\scshape #1
+\medskip
+\end{large}
+\end{center}}
+
+\renewcommand{\subsection}[1]{%
+\bigskip
+{\noindent \normalfont \bf \emph{#1}}
+}
+
+
+\begin{document}
+\begin{flushright}
+Version dated: \today
+\end{flushright}
+\bigskip
+
+\noindent Running title: Evolutionary Constraints On Pedicularis Flower Evolution \\
+
+\begin{center}
+
+{\Large \textbf{Evolutionary constraint and pollen-pistil 
+relationships above and below the species-level in 
+\emph{Pedicularis} (Orobanchaceae)}
+
+\bigskip
+\medskip
+
+{\large Deren A. R. Eaton,$^{1,*}$
+  Richard H. Ree,$^{2,3}$
+  (Huang student co-authors?), and 
+  Shuang-Quan Huang$^{4}$}}
+
+\medskip
+\end{center}
+
+{\it \small
+\noindent 
+$^1$Department of Ecology, Evolution, and Environmental Biology, Columbia University, New York, NY 10025, USA. \\
+\noindent $^2$Department of Botany, The Field Museum, Chicago, IL 60605, USA. \\
+\noindent $^3$Committee on Evolutionary Biology, University of Chicago, Chicago, IL 60637, USA. \\
+\noindent $^4$New University addresss... \\
+\noindent $^5$Author to whom correspondence should be addressed: de2356@columbia.edu \\  }
+\bigskip
+
+\begin{itemize}
+\small{
+\item \emph{Premise of the study}: Integration of floral parts is necessary to ensure accurate and efficient pollination but may also constrain the potential for individual traits to respond to selection. If trait covariation limits the divergence of individual floral traits within individuals and populations, then the rate and direction of divergence between species should occur along similar and predictable axes of evolvability. 
+
+%% The plant group \P~exhibits substantial variation in style lengths. This variation is especially pronounced because the style is enclosed by a fused corolla tube and galea. Increased integration among floral parts is thought to constrain adaptive evolution, however, flowers of \P~appear highly labile. 
+%% Pollen tubes must grow the length of the style to fertilize ovules, and incompatibilities between pollen size and pistil length can limit reproduction. 
+%% These constraints raise a number of questions: are pollen-pistil relationships conserved across \P~species? Does integration of the pistil and corolla accelerate the evolution of pollen-pistil incompatibilities between species? And similarly, does the constraint of pollen-pistil compatibility limit the evolution of corolla morphologies in \P?
+
+%% \item \emph{Methods}: \emph{Pedicularis} species have highly integrated flowers in which the corolla surrounds and encloses the pistil, but the group also exhibits striking floral diversity both within and among species. 
+
+\item \emph{Methods}: We examine the variance co-variance (VCV) structure of six continuous corolla measurements and two functionally dependent traits, pollen volume and pistil length, in \emph{Pedicularis}, a clade with diverse floral morphologies. A VCV matrix was estimated from floral variation \emph{within-species} (populations of a widespread and variable species complex, \emph{P. cranolopha}), and from floral variation across 40 species of \emph{Pedicularis}. A RAD-seq phylogeny was inferred for the within-species data set and genetic variation was included as a variable in phylogenetic linear mixed models. We test how functional and display traits covary, and whether the within-species variance-covariance structure (\PM) is conserved across divergent populations and species. 
+
+\item \emph{Key Results}: Pollen size and pistil length are more strongly correlated below the species level than above. Pollen size is more strongly correlated with galea length than style length, and pistil length variation correlates more stongly with galea length than corolla tube length. These traits are highly integrated, suggesting that selection on corolla morphology affects gametophytic competition, or similarly, that selection on gametophytes can explain variation in corolla morphologies. The first major axis of {\bf P} explains significant variation among populations of \PC, suggesting evolutionary constraint, whereas divergent species of \P~do not appear universally constrained by this same axis. However, when we limit comparison to only species that are nectar-less, like \PC, we find that floral differences among species co-vary similarly as they do within \PC. 
+%% All samples were pooled to infer a phenotypic variance-covariance matrix ({\bf P}). We tested for constraints on floral evolution by comparing {\bf P} to the variance-covariance matrix of population means ({\bf D}) and independent contrasts ({\bf D}$_{IC}$). A variance-covariance matrix was similarly measured for 40 divergent species, and compared to the within-species covariance structure. 
+
+\item \emph{Conclusions}: Strong similarities between the variance-covariance structure of diverging populations and divergent nectar-less species of \P~broadly distributed across the phylogeny supports the existence of strong developmental or selective constraints of floral evolution. The loss or gain of nectar production appears to facilitate a major transitition, allowing for evolution along divergent axes of floral morphospace. 
+}
+\end{itemize}
+
+{\bf Key words:} Phylogeny, variance-covariance matrix, quantitative genetics, pollen tube.
+
+\bigskip
+\bigskip
+
+
+%%----------------------------------------------------------------------
+%%----------------------------------------------------------------------
+%% INTRODUCTION---------------------------------------------------------
+%%----------------------------------------------------------------------
+%%----------------------------------------------------------------------
+\noindent 
+
+1. Linking macro- to microevolution is one of the fundamental challenges in
+evolutionary theory \citep{chevurud_, schluter_ecological_2000, arnold_phenotypic_2014, futuyma_evolutionary_2010}. 
+Some morphological characters evolve under stronger constraints than others. Additive genetic correlations \citep{}. \citep{kluge_predictability_1973, schluter_1996, arnold_2001}
+Genetic constraint makes some patterns of phenotypic diversification more likely than others \cite{revell_phylogenetic_2007}.  contingency in evolution can potentially explain vast differences in the diversity and disparity of lineages across the tree of life. 
++ Constrains on evolution come in many forms, whether developmental \cite{}, 
+limited by genetic variation, or by external selection pressures. Reproductive traits will often be constrained since divergence between populations   can reduce the effectiveness of reproduction, and high lability in such traits may reduce the effective...+ Pollen size and pistil length vary considerably across angiosperms.
+
+2. Constraints on floral evolution have received particular attention, and is often discussed in context of modularity \citep{} or alternatively, evolvability. Constraints may also explain homoplasy, something which is very common in flowers. modularity is a key aspect of evolvability \citep{pigliucci} (from diggle).
+flowers are thought to be highly integrated \citep{ordano}
+``The adaptive value of phenotypic floral integration''
+Diggle showed that different floral whorls -- developmental origins of floral parts -- often evolve in a modular way, such that one trait can evolve independently of another. In \P~this we suspect this to be unlikely, since the traits are strongly correlated. Do floral whorls in \P~show different levels of integration?
+
+3. Pedicularis has very integrated flowers. The integration is a function of development, and the fact that certain parts enclose other parts, and it is similarly related to functionality, that parts must work together, and match up in order for the rather specialized pollination mechanim to function accurately. Homoplasy is very common in Pedicularis, where four floral forms morphotypes have been loosely described, and which vary in their existence of four characters. The beak, the elongate tube, the tooth, and nectar. 
+\P~has radiated within the Hengduan Mountains of China where it also exhibits its greatest diversity of floral phenotypes. Their flowers are highly specialized for pollination, with the pistil enclosed in a sympetalous (fused) corolla tube, and extending. Changes in corolla shape must be accompanied by changes in style length, and similarly, changes in style length require associated changes in the corolla. Moreover, significant changes in the style length may require changes in pollen size or morphology \cite{}. (Elena had something about pollen size...). 
+Why are there these apparent ``eco-types'' that keep evolving? Selection for discrete areas of floral morphospace \citep{}, or because genetic constraints that limit their exploration of floral morphospace? \citep{}. 
+
+4. We approach these questions using quantitative genetics and phylogeny. 
+A trait cannot respond to a selection gradient directly, but will respond in a multivariate way due to correlation among traits (terribly worded)... The extent to which any individual trait can respond will depend on its degree of integration with other traits. In particular, animal pollinated flowers are considered to be highly integrated \citep{...}, due to the fitness requirements of having pollen and pistil situated correspondingly such that pollen can be efficiently picked up and deposited by pollinators. However, flowers can also be considered modular structures, constructed of parts with different developmental processes. A number of studies have shown de-coupling between display-effecting traits (corolla color and shape) versus functional traits (anther and pistil position), suggesting that certain parts of flowers may respond to selection independently of others. 
+\P~provides an interesting case to study floral integration because in many species the display features of the flower, the corolla, is highly integrated with the function traits affecting pollen placement and pickup. 
+
+\citep{bolstad_genetic_2015}
+% Pedicularis flowers are particularly integrated...
+
+
+
+
+
+
+
+%%---------------------------------------------------------------
+%%---------------------------------------------------------------
+%%---------------------------------------------------------------
+%%---------------------------------------------------------------
+
+
+\section{MATERIALS AND METHODS}
+
+\subsection{Study organisms and sampling--}
+We focus our study at two taxonomic levels which we refer to as the ``within-species'' and ``across-species'' data sets. The first composes a young clade including several described taxa that are primarily differentiated by calyx venation, the size and shape of the lower corolla lips, and a variable crest on the galea (\P~\emph{cranolopha}~Maxim., \PC~var. \emph{garnieri} (Bonati) P. C. Tsoong, \PC~var. \emph{longicornuta} Prain, \emph{P. croizatiana} H. L. Li, \emph{P. tricolor} Handel-Mazzetti)
+% , \emph{P. lophocentra} W-B. Y.).
+This variation is not outside the scope seen within other species of \P, and recent genomic studies have shown gene flow among populations (Eaton In Press), and thus 
+for this study we consider this a single species complex. Field collections focused on sampling variation across this clade were made during July and August, 2010, in northwest Yunnan and southwest Sichuan Provinces, China (Fig.~1A; Table~S1), and repeated in 2013 and 2018. The within-species data set is nested within our larger across-species data set which encompasses all \P~species (estimated crown age ~20 Mya \citep{ree_new_paper}). %We use a published phylogeny and limited sampling to species for which morphological data could be attained that was comparable to the within-species data set. 
+
+\subsection{Within-species genomic analyses--}
+Leaf tissues were collected from wild plants and stored in silica gel. Genomic DNA was extracted using DNeasy plant extraction kits (Qiagen, Valencia, CA) and prepared for RAD sequencing by Floragenex Inc. (Eugene, Oregon) through treatment with the PstI restriction enzyme and attachment of sample specific barcodes, as in \citep{baird_rapid_2008}. For this study we include a single individual from each population, but data were generated as part of a broader sampling that included >100 individuals sequenced on approximately 2.2 lanes of Illumina HiSeq to generate 100 bp single end reads. The remaining samples will be assessed in a separate study. Two closely related \P~species were included as outgroups (\emph{P. fletcheri} and \emph{P. elwesii}). Voucher information is available in Table~X. 
+
+Genomic data were assembled into \emph{de novo} loci using \emph{pyRAD} v.3.01 \citep{eaton_pyrad:_2014}. Quality filtering converted base calls with a score \textless20 into Ns and reads with \textgreater5 Ns were discarded. Illumina adapters and fragmented sequences were removed using the filter setting ``1'' in \emph{pyRAD}. Filtered reads were clustered at three similarity thresholds (88, 90, 92), all of which yielded similar results (Table~SY), therefore we report only the 90\% run. Error rate and heterozygosity were jointly estimated from clustered stacks for each sampled individual and the average parameter values were used when making consensus base calls. Clusters with a minimum depth of coverage \textless5 were excluded. Loci containing more than two alleles after error correction were excluded as potential paralogs (all taxa in this study are diploid). Consensus loci were then clustered across samples at 90\% similarity and aligned. A final filtering step excluded any loci which contain one or more sites that appear heterozygous across more than five samples, as we suspect this is more likely to represent a fixed difference among clustered paralogs than a true polymorphism at the scale of this study. Three data sets with different minimums for the proportion of allowed missing data were generated: the min4 data set contains all loci shared across at least four ingroup samples, the min10 dataset has all loci shared across at least 10 ingroup samples, and the min15 data set requires that data are shared across all ingroup samples. 
+
+\subsection{Phylogenetic analyses--}
+A phylogeny was estimated from concatenated supermatrices for each assembled RADseq data set for the within-species clade, in which missing data were entered as Ns. Maximum likelihood (ML) trees were inferred in RAxML v.7.2.8 \citep{stamatakis_raxml_2014} with bootstrap support estimated from 200 replicate searches from random starting trees using the GTR+$\Gamma$ nucleotide substitution model. All data sets yielded the same topology with perfect support, so this tree was entered as a fixed topology into PLL-dppdiv \citep{heath_x_x} to estimate ultrametric branch lengths using the min10 supermatrix. Using a Yule tree prior we estimated a posterior distribution of ultrametric tree using the the dirichlet process prior to sample rate variation along branches, and compared this to a strict clock model. MCMC chain were run for 30M generations and convergence assessed with the program Tracer \citep{} to check that all parameter ESS values were below X.XX. 
+
+For across-species analyses a maximum clade credibility (MCC) tree with mean node heights was summarized from the posterior sample of trees estimated by \citep{eaton_floral_2012}, which includes 98 species. The MCC tree was then pruned to include only taxa for which pollen volume data are available. Seven taxa in the pollen data set are not represented in the tree but have a close relative that is (based on unpublished phylogenetic results; R. Ree) which we used in their place: \emph{P.~cymbalaria} replaced \emph{P.~lyrata}; \emph{P.~dunniana} replaced \emph{P.~tristis}; \emph{P.~gracilicaulis} replaced \emph{P.~cephalantha}, \emph{P.~monbeigiana} replaced \emph{P.~oxycarpa}; and \emph{P.~princeps} replaced \emph{P.~rudis}; \emph{P.~stenocorys} replaced \emph{P.~polyodonta}; and \emph{P.~tenera} replaced \emph{P.~ternata}. To allow comparisons between the within-species and across-species trees we scaled relative branch lengths to the same scale by mutliplying branch lengths in the within-species tree by X.X such that the crown age of \PC~and \emph{P. tricolor} between the two trees was equal. 
+
+\subsection{Morphological measurements (within-species)--}
+Seven continuous floral traits were measured on each flower: corolla tube length, corolla width, galea beak length, lower lip length, lower lip width, and pollen volume (Fig.~1B-C). To allow for comparison between ``beaked'' and  ``non-beaked'' species of \P~we compare galea lengths, which are defined as the beak length plus the length of the galea opening. Pistil lengths were measured as galea length + corolla tube length (Fig.~1). Measurements were made in the field using digital calipers except for pollen volume, for which pollen was preserved in stained xyz jelly (!lookup recipe!) on microscope slides and later examined at 400X under a light microscope. Volume of ovate pollen grains was calculated following \cite{aguilar} as V=($\pi$PE$^2$)/6, where P is the diameter of the longest axis and E is the diameter of the perpendicular axis. Pollen slides were made for three individuals per population, and all pollen grains within a field of view were measured at three different locations on each slide (n=1,087 pollen grains). Because pollen volume was not measured for every flower, values for each individual were randomly generated from a normal distribution using the mean and standard deviation inferred from the three measured flowers from its population. This has the effect of retaining the measured variance in pollen volume within-populations -- for use in comparisons across populations -- but introduces noise regarding its co-variation with other traits within individuals. 
+
+\subsection{Morphological measurements (across-species)--}
+Pollen volume and pistil length were measured by \cite{yang} for XX species of \P. In addition to these data, 
+we measured the same five corolla measurements described above for 38 species of \P~based on specimens at the Harvard University Herbarium. %In this case the galea opening was measured directly as the length from the corolla opening to the crest of the galea. 
+%For comparisons across species, including those that are beak-less, we measured galea length to include the beak length (Fig.~1B). 
+Sample size ranged from 3 to 12 individuals per species (median xx, S.D.=xx). 
+
+\subsection{Variance-covariance matrix estimation (within-species)--}
+To estimate a variance co-variance matrix (VCV) representing floral trait variation in the within-species clade, 
+we used a generalized linear mixed model implemented in the R package MCMCglmm \citep{hadfield_2013}. Typically, the phenotypic VCV matrix (\PM) is measured as the sum of the genetic VCV matrix (\GM)~and a residual environmental VCV matrix {\bf E}. Without having performed a crossing experiment to estimate the genetic component in isolation, we are limited to instead estimate an approximation of \GM~by partitioning the residual within-plant variance from the among-plant variance. Thus, we are using an environmentally corrected \PM~matrix for our analyses. To estimate the among-plant phenotypic VCV matrix (\PM~) we used the following model: 
+
+\begin{equation}
+z_{ijk} = u_i + p_{ij} + e_{ijk}
+\end{equation}
+
+\noindent where $z$ is the trait value, $u$ is the trait mean, $p$ is the plant-level effect, and $e$ is the residual within-plant effect. The subscripts $i$, $j$ and $k$ represent the trait type, plant, and flower, respectively. Following \citep{bolstad_genetic_2014}, random effects were assumed to be independently identically distributed as {\bf b}{\textasciitilde}$N$({\bf 0}, {\bf P}{\kronecker}{\bf I}) and {\bf q}{\textasciitilde}$N$({\bf 0}, {\bf E}{\kronecker}{\bf I}), where {\bf I} is the identity matrix and \kronecker~is the Kronecker product. This analysis does not utilize a phylogeny of the sampled populations, but instead treats all individuals of \PC~as a pooled population, and thus we are able to use morphological data for all 26 sampled populations (as opposed to only the 15 for which we have phylogenetic data) to infer the \PM~matrix.
+
+\subsection{Within-species trait variation--}
+We also used a phylogenetic mixed model \citep{lynch,hadfield} to investigate phylogenetic signal in floral traits and measure evolutionary rates. As in \citep{bolstad_genetic_2014}, we fitted each individual trait separately using a univariate model because the small number of populations limits our statistical power. Traits were first log-transformed and mean-standardized. To estimate phylogenetic and population-level effects we used the following model:
+
+\begin{equation}
+z_{ijk} = u + a_i + r_{ij} + p_{ij} + e_{ijk}
+\end{equation}
+
+\noindent where $a$ is the phylogenetic effect, $r$ is the residual population-level effect, $p$ is the plant-level effect, and $e$ is the residual within-plant effect. This was fit both with and without residual population-level effects. In the latter case, the phylogenetic effect is equal to the evolutionary rate ($\sigma^2_{rate}$), 
+since it is the phylogenetically corrected among-population variance \citep{bolstad}, thus it measures
+the increase in variance per unit length of the phylogeny under Brownian motion. 
+We will use this to measure the correlation between population phenotypic divergences 
+and evolvabilities (based on \PM; see below), to ask whether highly evolvable traits 
+show greater divergence between populations. 
+
+\subsection{Among-species trait variation--}
+The same phylogenetic mixed model was also used to fit trait variation across 38 species of \P. In addition to univariate models we also fit pairwise combinations of all traits to examine the integration of floral parts. All model fits in MCMCglmm used the priors analagous to those in \cite{bolstad}, but scaled to the number of traits in our analyses.
+
+\subsection{Evolvability measures--}
+The integration of measured floral traits (and conversely their modularity) was measured using the 
+evolvability R package \citep{}, which implements the methods of \citep{hansen&houle} to quantify
+the conditional evolvability of each trait (or set of traits) as their potential to evolve 
+when the other measured traits are not allowed to change. It is the residual variance from a 
+regression on the constraining traits. Integration of one trait with others 
+is one minus the ratio between the conditional and unconditional evolvabilities.
+An overall measure of evolutionary integration can be measured by averaging 
+integration over many random directions in morphospace. 
+ 
+
+\subsection{Evolvability and evolutionary divergence--}
+
+
+\subsection{Axes of differentiation}
+We use \GM~estimated for all populations of \PC~to ask whether the divergences we observe between
+species fall along similar axes of divergence. For this we measure e$_{min}$ and e$_{max}$, the 
+evolvability of each trait along the first and last principal component axes estimated for the 
+within-species data set. 
+
+\subsection{Rates of evolution}
+
+
+\subsection{Reproducibility}
+A collection of Python, R, and bash scripts are organized into IPython notebooks (a tool for reproducible science) \citep{}, available at http://github.com/dereneaton/flower-constraint, along with archived trait and tree data. These scripts can be used used to download sequence data, assemble it, and reproduce all statistical analyses in this study. 
+
+
+%%--------------------------------------------------------------
+%%--------------------------------------------------------------
+%%--------------------------------------------------------------
+%%--------------------------------------------------------------
+%%--------------------------------------------------------------
+
+\section{RESULTS}
+
+
+Many factors can limit the exploration of morphospace and thus increase the propensity for convergence. Below the species level, additive genetic variation may be important, but this cannot explain convergence at the genus level....
+
+\subsection{Patterns of evolvability--}
+
+
+
+
+\subsection{Among population variation in P}
+Variance among populations was much greater than within individuals (Va=x, Vi=y), including after correcting for the non-independence of populations (Va=x). Inferred P matrices among populations of \PC~were highly similar by all methods of matrix comparison employed (Table~X). 
+
+
+\section{DISCUSSION}
+%% The reduced-representation genomic analyses presented here show
+%% that (1) among a young clade of seven interfertile oaks nearly every species 
+%% has exchanged genes with at least one other taxon where they come into contact, 
+%% and that introgression is predominately localized; 
+%% (2) that introgression between divergent lineages affects 
+%% the inferred phylogenetic relationships within them;
+%% (3) that hybridization and introgression can be teased apart
+%% among multiple closely related taxa; and (4) that doing so 
+%% can help to resolve historical biogeographic scenarios, and species relationships.
+%% To our knowledge this is the most expansive study to date
+%% investigating historical hybridization from genomic introgression 
+%% at the scale of an entire clade composing 
+%% many interfertile but ecologically and evolutionarily divergent species.
+
+%% Because the live oaks appear to hybridize in every region where
+%% two species are in close contact today, we should expect that 
+%% any past differences in species geographic ranges that may have brought 
+%% them into contact would be detectable through signatures of genomic 
+%% introgression left in their descendant genomes. 
+%% Thus, in a similar manner to the identification of glacial refugia 
+%% from patterns of genetic diversity \citep{petit_glacial_2003}, 
+%% introgression between lineages can be used to reconstruct past
+%% biogeographic states; for example, by adding constraints
+%% requiring that two lineages occurred in sympatry at some time in the past. 
+%% In the case of the live oaks, we find little evidence of 
+%% hybridization that is not concordant with present day geographic 
+%% overlap, suggesting species geographic ranges have remained relatively 
+%% stable over millions of years. Only \B, in Baja California shows complete
+%% isolation from all other species, making it a form of genomic refuge, 
+%% that when contrasted to its sister lineage \F, allowed us to identify 
+%% many instances of introgression into that taxon.
+
+%% The live oaks exhibit substantial differentiation 
+%% in adaptations to climatic niche, particularly with regard 
+%% to drought and freezing tolerances
+%% \citep{cavender-bares_molecular_2009,cavender-bares_phylogeography_2011}. 
+%% Together they span a nearly continuous range 
+%% from temperate, to dry desert, and even tropical climates, 
+%% but dissected by porous boundaries between species specialized
+%% to each region. One hypothesis for the restricted spread of introgressed alleles
+%% between species is that they facilitate adaptations to intermediate climates
+%% near hybrid zones, but decrease fitness elsewhere \citep{barton_analysis_1985}.
+%% We find that gene flow is theoretically possible between up 
+%% to six different species of live oaks which essentially form a ring 
+%% around the entire gulf of Mexico: 
+%% The dry adapted \F~connects the cold tolerant \V~in the 
+%% north to tropical \O~in Central America through introgression with both, 
+%% and these two taxa also share a connection through bi-directional gene flow
+%% with \S~in Cuba -- a sort of island bridge in the east. 
+
+\section{Ontogeny}
+I have photos of ontogeny in several populations of \PC. Across several species 
+W-B has shown that the upper petals forming the galea (and beak) differentiate 
+from the other petals early during development, and that elongation of the 
+corolla tube occurs much later. Across several long tubed species we have 
+observed the same phenomenon qualitatively (Fig.~S3). Interestingly, one 
+of the primary traits used to differentiate subspecies of \PC is a 
+the presence of a crest on the galea. We find that this recently evolved
+structure that varies within this species complex does not arise late in 
+development but rather is present near the earliest stages (Fig.~S3b). 
+Talk about adding on to the end versus the beginning, and how this relates
+to heterochrony versus new structures. 
+
+\subsection{Supplement--}
+
+\bibliography{refs}
+\bibliographystyle{ecol_let}
+
+\clearpage
+\newpage
+
+\begin{figure}
+\centering
+\includegraphics{flowers}
+\caption{(A) Three representative floral morphs in \P. 
+Indicated is the corolla tube, galea, and
+style (dotted line) which is enclosed.
+Photos show \emph{P.~rex}, \emph{P.~integrifolia},
+and \emph{P.~batangensis} (Photo credit: D.~Eaton).
+(B) } 
+\label{fig:1}
+\end{figure}
+
+\clearpage
+\newpage
+
+\begin{figure}
+\centering
+\includegraphics{geo_traits}
+\caption{(A) Geographic sampling locations for twenty six populations of 
+\emph{P. cranolopha} in the Hengduan Mountains of China. 
+Populations selected for genomic sampling are shown in circles. 
+(B) Floral variation between \emph{P.~cranolopha} populations. 
+(C) A rooted ML phylogeny for 15 populations of \PC~inferred from
+concatenated RADseq data. Pistil lengths (bars; mm) and 
+pollen volume (circles; mm x 10$^{-3}$) are plotted on the same axis.}
+\label{fig:2}
+\end{figure}
+
+
+\clearpage
+\newpage
+
+%% \begin{table}
+%% \caption*{Table~1: Pollen-pistil relationship above and below the species level in \P~measured using PGLS ($\lambda$>0) or GLS without phylogenetic correction ($\lambda$=0). Above the species level shows mean $\pm$ SD over a posterior distribution of trees.}
+
+%% \centering
+%% \begin{tabular}{lcccc}
+%% \hline
+%% Data set               &  N       &  Coeff.           &  $P$                  &  $\lambda$ \\
+%% \hline
+%% \P                     &  38      &  0.39 (\pm 0.02)  &  0.0045 ($\pm$0.0012) &  0.56 ($\pm$0.05) \\
+%% \P                     &  38      &  0.51             &  0.0008               &  0.00 \\
+%% \P~(nectar-less)       &  24      &  0.40 (\pm 0.05)  &  0.0034 ($\pm$0.0001) &  0.40 ($\pm$0.01) \\
+%% \P~(nectar-less)       &  24      &  0.40             &  0.0034               &  0.00 \\
+%% \P~(nectar-producing)  &  14      &  0.40 (\pm 0.05)  &  0.0034 ($\pm$0.0001) &  0.40 ($\pm$0.01) \\
+%% \P~(nectar-producing)  &  14      &  0.40             &  0.0034               &  0.00 \\
+%% \PC                    &  15      &  0.40 (\pm 0.05)  &  0.0034 ($\pm$0.0001) &  0.40 ($\pm$0.01) \\
+%% \PC                    &  15      &  0.40             &  0.0034               &  0.00 \\
+%% \hline
+%% \end{tabular}
+%% \end{table}
+
+
+\begin{table}
+\caption*{Table~1: Means of evolvability measures (e, r and c in \% of trait mean) from within-species \PM~matrices.} 
+\centering
+\small
+\begin{tabular}{lcc}
+\hline
+              &  Functional traits     &   Display traits        \\
+\hline
+$e_{mean}$      &   0.03~(0.02,0.03)     &   0.01~(0.01,~0.02)     \\
+$e_{min}$       &                        &   \\
+$e_{max}$       &                        &       \\
+$r_{mean}$      &   0.04~(0.03,~0.05)    &   0.02~(0.01,~0.02)    \\
+$c_{mean}$      &   0.00~(0.00,~0.00)    &   0.00~(0.00,~0.00)    \\
+$i_{mean}$      &   0.97~(0.94,~0.99)    &   0.91~(0.82,~0.97)    \\
+\hline
+\end{tabular}
+\end{table}
+
+
+%%------------------------------------------------------
+%%------------------------------------------------------
+%%------------------------------------------------------
+%%------------------------------------------------------
+%% Bolsted Tables 3 & 4
+
+%% \begin{table}
+%% \caption*{Table~Y: Within-species trait means ($z_{mean}$ in mm) with standard error across 520 flower in the \PC~species complex, and variance components (median with 95\% posterior density) from generalized linear mixed models. The variance components are mean standardized and multiplied by 100.}
+%% \centering
+%% \small
+%% \begin{tabular}{lcccccccc}
+%% \hline
+
+%%   ~~~~~~           &  Poll  & Pist  & Beak & Tube & Gale & LipW & LipL & CorW \\
+%% \hline
+%% $z_{mean}$           &  0.90\pm0.47 & 0.90\pm0.47 & 0.90\pm0.47 & 0.90\pm0.47 & 0.90\pm0.55 & 0.90\pm0.55 & 0.90\pm0.55 & 0.90\pm0.55\\
+%% $e$                &  0.90\pm0.47 & 0.90\pm0.47 & 0.90\pm0.47 & 0.90\pm0.47 & 0.90\pm0.55 & 0.90\pm0.55 & 0.90\pm0.55 & 0.90\pm0.55\\
+%% $\sigma^2_{plant}$    &             &       \\
+%% $\sigma^2_{flower}$    &             &       \\
+%% \hline
+%% \end{tabular}
+%% \end{table}
+
+\begin{table}
+\caption*{Table~2: Within-species trait means ($\pm$1 S.D.) measured across 520 flowers in the \PC~species complex, and variance components (median with 95\% posterior density) from generalized linear mixed models. The variance components are mean standardized and multiplied by 100. All $z_{mean}$ are measured in mm except pollen volume which is mm$^3$.}
+\centering
+\small
+\begin{tabular}{lrccccccc}
+\hline
+
+ Trait    &  $z_{mean}$  &  $\sigma^2_{plant}$  &  $\sigma^2_{flower}$ & $e$ \\
+\hline
+Poll      &    8.95\pm0.18   & 100.0     \\
+Pist      &   67.63\pm1.02   &  88.8    \\
+Beak      &    7.13\pm0.10   &       \\
+Tube      &    4.07  &         \\
+Gale      &    2.21  &         \\
+LipL      &          &         \\
+LipW      &          &         \\
+CorW      &          &         \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+%%------------------------------------------------------
+%%------------------------------------------------------
+%%------------------------------------------------------
+%%------------------------------------------------------
+
+
+\clearpage 
+\newpage
+
+
+\begin{table}
+\caption*{Table~3: Variance components from univariate phylogenetic mixed models for 15 populations of the \PC~species complex, fit for eight continuous floral traits. Values are reported as the median and 95\% posterior density. The evolutionary rate ($\sigma^2_{rate}$) represents the mean-scaled variance accumulated over the length of the phylogeny in \%, and along with the phylogenetic variance ($\sigma^2_{phylo.comp}$) is reported in units of (ln mm)$^2$/$t$, where $t$ is the tree length ($t$=1). The other variance components have units of (ln mm)$^2$. Phylogenetic heritability (H$^2_{phylo}$) is calculated as $t\sigma^2_{phylo.comp}/(t\sigma^2_{phylo.comp} + \sigma^2_{pop.resid})$.}
+\centering
+\footnotesize
+\begin{tabular}{lcccccc}
+\hline
+
+ Trait    &  $\sigma^2_{rate}$  & $\sigma^2_{phylo.comp}$  & $\sigma^2_{pop.resid}$ & $H^2_{phylo}$ & $\sigma^2_{plant}$ & $\sigma^2_{flower}$ \\
+\hline
+\multicolumn{5}{l}{within-species variance components (t=1) } \\
+\hline
+Poll   &   0.93~(0.40,~1.97)  & 0.86~(0.22,~2.00)  &  0.04~(0.00,~0.41)  & 0.92~(0.45,~1.00)  & 0.01~(0.00,~0.03) & 0.19~(0.15,~0.22)   \\
+Pist   &   1.91~(0.66,~4.25)  & 0.53~(0.00,~2.74)  &  0.49~(0.00,~1.34)  & 0.35~(0.00,~0.98)  & 0.31~(0.23,~0.41) & 0.10~(0.08,~0.13)   \\
+Beak   &   1.00~(0.37,~2.16)  & 0.94~(0.18,~2.35)  &  0.05~(0.00,~0.45)  & 0.92~(0.44,~1.00)  & 0.14~(0.10,~0.19) & 0.10~(0.08,~0.12)    \\
+Gale   &   0.98~(0.42,~2.20)  & 0.97~(0.11,~2.28)  &  0.04~(0.00,~0.46)  & 0.94~(0.44,~1.00)  & 0.13~(0.09,~0.18) & 0.10~(0.08,~0.12)    \\
+Tube   &   1.83~(0.72,~4.12)  & 0.64~(0.00,~0.63)  &  0.42~(0.00,~1.23)  & 0.46~(0.00,~0.99)  & 0.29~(0.22,~0.38) & 0.10~(0.08,~0.12)    \\
+LipL   &   1.33~(0.49,~2.74)  & 1.15~(0.00,~2.85)  &  0.10~(0.00,~0.99)  & 0.88~(0.06,~1.00)  & 0.14~(0.08,~0.20) & 0.16~(0.13,~0.21)     \\
+LipW   &   1.21~(0.47,~2.84)  & 0.49~(0.00,~1.99)  &  0.27~(0.00,~0.94)  & 0.49~(0.01,~1.00)  & 0.42~(0.32,~0.56) & 0.15~(0.12,~0.19)    \\
+CorW   &   1.33~(0.56,~2.76)  & 1.24~(0.00,~2.78)  &  0.07~(0.00,~0.80)  & 0.92~(0.27,~1.00)  & 0.16~(0.12,~0.22) & 0.08~(0.07,~0.10)    \\
+\hline
+\multicolumn{5}{l}{across-species variance components (t=6.81) } \\
+\hline
+Poll   &   0.05~(0.03,~0.08)  & 0.03~(0.01,~0.07)  &  x.xx~(0.00,~0.13)  &  0.91~(0.67,~0.99) & 0.00~(0.00,~0.00) & x.xx~(0.01,~0.01)    \\
+Pist   &                      & 0.53~(0.00,~2.74)  &  0.49~(0.00,~1.34)  & 0.35~(0.00,~0.98)  & 0.31~(0.23,~0.41) & 0.10~(0.08,~0.13)    \\
+Beak   &   1.00~(0.37,~2.16)  & 0.94~(0.18,~2.35)  &  0.05~(0.00,~0.45)  & 0.92~(0.44,~1.00)  & 0.14~(0.10,~0.19) & 0.10~(0.08,~0.12)    \\
+Gale   &   0.98~(0.42,~2.20)  & 0.97~(0.11,~2.28)  &  0.04~(0.00,~0.46)  & 0.94~(0.44,~1.00)  & 0.13~(0.09,~0.18) & 0.10~(0.08,~0.12)    \\
+Tube   &   1.83~(0.72,~4.12)  & 0.64~(0.00,~0.63)  &  0.42~(0.00,~1.23)  & 0.46~(0.00,~0.99)  & 0.29~(0.22,~0.38) & 0.10~(0.08,~0.12)    \\
+LipL   &   1.33~(0.49,~2.74)  & 1.15~(0.00,~2.85)  &  0.10~(0.00,~0.99)  & 0.88~(0.06,~1.00)  & 0.14~(0.08,~0.20) & 0.16~(0.13,~0.21)    \\
+LipW   &   1.21~(0.47,~2.84)  & 0.49~(0.00,~1.99)  &  0.27~(0.00,~0.94)  & 0.49~(0.01,~1.00)  & 0.42~(0.32,~0.56) & 0.15~(0.12,~0.19)    \\
+CorW   &   1.33~(0.56,~2.76)  & 1.24~(0.00,~2.78)  &  0.07~(0.00,~0.80)  & 0.92~(0.27,~1.00)  & 0.16~(0.12,~0.22) & 0.08~(0.07,~0.10)    \\
+\hline
+\end{tabular}
+\end{table}
+
+%% \begin{table}
+%% \caption*{Table~4: Variance components of the phylogenetic mixed models across 38 species of \P. The evolutionary rate ($\sigma^2_{rate}$) represents the mean-scaled variance accumulated over the length of the phylogeny in \%, and along with the phylogenetic variance ($\sigma^2_{phylo.comp}$) is reported in units of 100$\times$(ln mm)$^2$/$t$, where $t$ is the tree length ($t$=6.81)}
+%% \centering
+%% \footnotesize
+%% \begin{tabular}{lcccccc}
+%% \hline
+
+%%  Trait    &  $\sigma^2_{rate}$  & $\sigma^2_{phylo.comp}$  & $\sigma^2_{pop.resid}$ & $H^2_{phylo}$ & $\sigma^2_{plant}$ & $\sigma^2_{flower}$ \\
+%% \hline
+%% \hline
+%% \end{tabular}
+%% \end{table}
+
+
+\end{document}
